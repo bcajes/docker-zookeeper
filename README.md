@@ -93,4 +93,15 @@ container from:
 ```
 $ docker images | grep zookeeper
 mpetazzoni/zookeeper   3.4.6              294bef30310b        2 days ago          12.29 kB (virtual 856.7 MB)
+
++```
++
++Once built, this image is intended for use via 
++[maestro-ng orchestration](https://github.com/signalfuse/maestro-ng).  For
++example:
++
++```
++$ cd ./maestro-examples/single-node/ && python -m maestro start
++  #  INSTANCE             SERVICE         SHIP                 CONTAINER       STATUS
++  1. zk-node-1            zookeeper       vm1                  1d050d0         started
 ```
